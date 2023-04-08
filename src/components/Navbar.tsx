@@ -4,6 +4,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/ui/Button";
 import SignInButton from "@/components/SignInButton";
 import SignOutButton from "@/components/SignOutButton";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export interface NavbarProps {}
 
