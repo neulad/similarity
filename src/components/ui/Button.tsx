@@ -83,18 +83,14 @@ interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   isLoading?: boolean;
-  disabled?: boolean;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { className, children, variant, size, disabled, isLoading, ...props },
-    ref
-  ) => {
+const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, children, variant, size, isLoading, ...props }, ref) => {
     return (
       <button
         ref={ref}
-        disabled={isLoading || disabled}
+        disabled={isLoading}
         {...props}
         className={cn(buttonVariants({ size, variant }), className)}
       >

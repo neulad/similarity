@@ -5,12 +5,11 @@ import { buttonVariants } from "@/ui/Button";
 import SignInButton from "@/components/SignInButton";
 import SignOutButton from "@/components/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
-import { authOptions } from "@/lib/auth";
 
 export interface NavbarProps {}
 
 export const Navbar = async ({}) => {
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession();
 
   return (
     <div
