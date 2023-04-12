@@ -55,7 +55,7 @@ const Table: FC<TableProps> = ({ userRequests }) => {
     },
   });
 
-  const rows = userRequests.map((request) => ({
+  const rows = userRequests.reverse().map((request) => ({
     id: request.id,
     col1: request.usedApiKey,
     col2: request.path,
