@@ -43,7 +43,7 @@ const handler = async (
 
     const timeStart = new Date();
 
-    const embedding = await Promise.all();
+    const embedding = await Promise.all([text1, text2].map(async (text) => {}));
   } catch (err) {
     if (err instanceof z.ZodError) {
       return res.status(400).json({
